@@ -18,9 +18,9 @@ public class _4_ReverseAnArrayOfStrings {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i]+" ");
         }
-        for (String s : arr) {
-            
-        }
+//        for (String s : arr) {
+//
+//        }
 //        for (String s : arr) {
 //        System.out.println(s);
 //    }
