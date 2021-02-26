@@ -8,24 +8,25 @@ public class _7_MaxSequenceOfEqualElements {
         Scanner scanner = new Scanner(System.in);
         int equalsNum = 0;
         int startIndex = 0;
+        int count ;
         int[] numbers = Arrays.stream(scanner.nextLine().split(" "))
                 .mapToInt(Integer::parseInt).toArray();
         for (int index = 0; index <= numbers.length - 1; index++) {
             int number = numbers[index];
-            int count = 0;
+            count = 0;
             for (int i = 0; i <= numbers.length - 1; i++) {
                 if (number == numbers[i]) {
                     count++;
                     if (count > equalsNum) {
                         equalsNum = count;
-                        startIndex = (i+1) - equalsNum;
+                        startIndex = ((i+1) - equalsNum);
                     }
                 } else {
                     count = 0;
                 }
             }
         }
-        for (int i = startIndex; i < startIndex+equalsNum; i++) {
+        for (int i = startIndex; i < (startIndex+equalsNum); i++) {
             System.out.print(numbers[i]+" ");
         }
     }
