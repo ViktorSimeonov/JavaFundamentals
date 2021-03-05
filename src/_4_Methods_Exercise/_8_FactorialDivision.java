@@ -13,7 +13,8 @@ public class _8_FactorialDivision {
 
     private static void factorial(int x, int y) {
         double result = factorialX(x) / factorialY(y);
-        System.out.print(new DecimalFormat( "##.00").format(result));
+        System.out.printf("%.2f",result);
+        // System.out.print(new DecimalFormat( "##.00").format(result));
     }
     static double factorialX(int x) {
         double resultX=x;
