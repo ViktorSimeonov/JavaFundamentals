@@ -48,7 +48,8 @@ public class _1_SumAdjacentEqualNumbers {
         String num = scanner.nextLine();
         String[] numbers = num.split(" ");
         ArrayList<Double> newList = new ArrayList<>();
-        for (String s : numbers) {
+        for (int i = 0, numbersLength = numbers.length; i < numbersLength; i++) {
+            String s = numbers[i];
             double x = Double.parseDouble(s);
             newList.add(x);
         }
