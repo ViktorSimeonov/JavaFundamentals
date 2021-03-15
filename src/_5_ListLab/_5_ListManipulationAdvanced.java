@@ -69,6 +69,7 @@ public class _5_ListManipulationAdvanced {
         }
        /* if (end) {
             printNumbers(numbers);
+
         }*/
 
     }
