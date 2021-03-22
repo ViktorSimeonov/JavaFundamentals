@@ -14,7 +14,7 @@ public class _5_Students {
         List<Students> students = new ArrayList<>();
         for (int i = 0; i < N; i++) {
             String[] input = scanner.nextLine().split(" ");
-            Students s = new Students(input[0],input[1],Double.parseDouble(input[2]));
+            Students s = new Students(input[0], input[1], Double.parseDouble(input[2]));
             students.add(s);
         }
         /*List<User> sortedUsers = users.stream()
@@ -24,14 +24,21 @@ public class _5_Students {
      /*   List<User> sortedUsers = users.stream()
                 .sorted(Comparator.comparing(User::getCreatedOn).reversed())
                 .collect(Collectors.toList());*/
-        List<Students> sortedByGrade=students.stream()
+        // ТОЗИ РЕД 1 Е СЪЩОТО КАТО РЕД 2
+        students.stream()
+                .sorted((students1, students2) -> Double.compare(students2.getGrade(), students1.getGrade()))
+                .forEach(students1 -> System.out.println(students1.toString()));
+
+        //РЕД 2
+        /*List<Students> sortedByGrade=students.stream()
                 .sorted(Comparator.comparing(Students::getGrade).reversed())
                 .collect(Collectors.toList());
         for (Students students1 : sortedByGrade) {
             System.out.println(students1.toString());
-        }
+        }*/
 
     }
+
     static class Students {
         String firstName;
         String lastName;
@@ -55,9 +62,10 @@ public class _5_Students {
         public double getGrade() {
             return grade;
         }
+
         @Override
         public String toString() {
-            return String.format("%s %s: %.2f",getFirstName(),getLastName(),getGrade());
+            return String.format("%s %s: %.2f", getFirstName(), getLastName(), getGrade());
         }
 
     }
