@@ -33,7 +33,7 @@ public class _4_Songs {
     static class Songs {
 
         String typePlayList;
-        String nameOfSong;
+        String nameOfSong; 
         String timeOfSong;
 
         Songs(String typePlayList, String nameOfSong, String timeOfSong) {

@@ -76,7 +76,7 @@ public class _6_Students2 {
 
         public static Student parseStudent(String string) {
             String[] studentParameters = string.split(" ");
-            return new Student(studentParameters[0], studentParameters[1],
+            return new  Student(studentParameters[0], studentParameters[1],
                     Integer.parseInt(studentParameters[2]), studentParameters[3]);
         }
 
