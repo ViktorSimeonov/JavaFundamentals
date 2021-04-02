@@ -13,6 +13,7 @@ public class _6_VehicleCatalogue {
         String colorOfVehicle;
         int horsePower;
 
+
         public Vehicle(String typeOfVehicle, String modelOfVehicle, String colourOfVehicle, int horsePower) {
             this.typeOfVehicle = typeOfVehicle;
             this.modelOfVehicle = modelOfVehicle;
